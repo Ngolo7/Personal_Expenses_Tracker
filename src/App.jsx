@@ -5,9 +5,11 @@ import { TransactionProvider } from "./contexts/TransactionContext";
 function App() {
   return (
     <TransactionProvider>
-      <div className="min-h-screen">
-        <DashBoard />
-      </div>
+      <ErrorBoundary>
+        <div className="min-h-screen">
+          <DashBoard />
+        </div>
+      </ErrorBoundary>
     </TransactionProvider>
   );
 }
